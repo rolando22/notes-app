@@ -111,3 +111,65 @@ a {
     margin: 0 0 10px 0;
     font-size: 3.8rem;
 }
+
+.card-edit-section {
+    width: 85%;
+    margin: 30px auto;
+    display: grid;
+    justify-items: center;
+}
+
+.card-edit-section .card__container {
+    width: 200px;
+    height: 250px;
+    display: grid;
+    grid-template-rows: 60px 190px;
+    place-items: center;
+    background-color: #ffffff;
+}
+
+.card__container .card__title {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #d1cfcf;
+}
+
+.card__container .card__body {
+    width: 100%;
+    height: 100%;
+}
+
+.card__body .card__form {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
+    place-items: center;
+}
+
+.card__form .card__form-text {
+    width: 85%;
+    height: 70%;
+    padding: 0 10px;
+    align-self: end;
+    border: 1px solid #d1cfcf;
+}
+
+.card__form .card__form-textarea {
+    width: 85%;
+    height: 75%;
+    padding: 5px 10px;
+}
+
+.card__form .card__form-button {
+    width: 85%;
+    height: 60%;
+    align-self: start;
+    color: #ffffff;
+    border: 1px solid #0a8cd7;
+    background-color: #0a8cd7;
+    border-radius: 2px;
+}
