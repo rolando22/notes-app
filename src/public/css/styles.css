@@ -10,6 +10,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    background-color: #1488cc;
 }
 
 li {
@@ -25,7 +26,7 @@ a {
     height: 50px;
     display: grid;
     align-items: center;
-    background-color: rgb(237, 237, 237);
+    background-color: rgb(65, 65, 65);
 }
 
 .nav .nav-container {
@@ -60,9 +61,53 @@ a {
 
 .nav .nav__logo {
     font-size: 1.8rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 .nav .nav__list-item:hover {
-    color: #000000;
+    color: #ffffff;
+}
+
+.main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.main .home__container {
+    width: 85%;
+    margin: 70px auto;
+    padding: 60px 20px;
+    background-color: #f1ecec;
+}
+
+.home__container .home__title {
+    font-size: 3.8rem;
+}
+
+.home__container .home__text {
+    margin: 20px 0;
+}
+
+.home__container .home__button {
+    padding: 8px 15px;
+    font-size: 1.4rem;
+    color: #f6f5f5;
+    background-color: rgb(87, 87, 238);
+}
+
+.main .about {
+    width: 85%;
+    margin: 50px auto;
+    background-color: #ffffff;
+}
+
+.about .about__container {
+    width: 100%;
+    padding: 30px 20px;
+    border: 1px solid #f1ecec;
+}
+
+.about .about__title {
+    margin: 0 0 10px 0;
+    font-size: 3.8rem;
 }
