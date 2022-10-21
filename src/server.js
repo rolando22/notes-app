@@ -1,6 +1,7 @@
 const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
+const methodOverride = require('method-override');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.set('view engine', '.hbs')
 
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'));
 
 //Routes
 app.use(require('./routes/index.routes'));

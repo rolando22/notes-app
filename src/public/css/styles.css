@@ -120,7 +120,7 @@ a {
 }
 
 .card-edit-section .card__container {
-    width: 200px;
+    width: 250px;
     height: 250px;
     display: grid;
     grid-template-rows: 60px 190px;

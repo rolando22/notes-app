@@ -8,7 +8,7 @@ notesCtrl = {
         const { title, description } = req.body;
         const newNote = new Note({ title, description });
         await newNote.save();
-        res.send('new note');
+        res.redirect('/notes');
     },
     renderNotes: async (req, res) => {
         const notes = await Note.find().lean();
@@ -20,8 +20,9 @@ notesCtrl = {
     updateNote: (req, res) => {
         res.send('update note');
     },
-    deleteNote: (req, res) => {
-        res.send('deleting note');
+    deleteNote: async (req, res) => {
+        await Note.findByIdAndDelete(req.params.id);
+        res.redirect('/notes');
     },
 }
 
