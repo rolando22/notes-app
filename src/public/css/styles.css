@@ -184,6 +184,7 @@ a {
     justify-self: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 200px));
+    gap: 20px;
 }
 
 .notes__container .note-card {
