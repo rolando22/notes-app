@@ -1,0 +1,13 @@
+<section class="card-edit-section">
+    <div class="card__container">
+        <h3 class="card__title">Edit Note</h3>
+        <div class="card__body">
+            <form class="card__form" action="/notes/edit/{{note._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <input class="card__form-text" type="text" name="title" placeholder="Title" value="{{note.title}}">
+                <textarea class="card__form-textarea" name="description" placeholder="Description">{{note.description}}</textarea>
+                <button type="submit" class="card__form-button">Save</button>
+            </form>
+        </div>
+    </div>
+</section>
