@@ -1,0 +1,13 @@
+<section class="notes">
+    <div class="notes__container">
+        {{#each notes}}    
+        <article class="note-card">
+            <h4 class="note__title">{{title}}<a href="/notes/edit/{{_id}}">Edit</a></h4>
+            <p class="note__description">{{description}}</p>
+            <form action="/notes/delete/{{_id}}" method="POST">
+                <button class="note__button" type="submit">Delete</button>
+            </form>
+        </article>
+        {{/each}}
+    </div>
+</section>
