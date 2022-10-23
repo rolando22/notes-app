@@ -2,6 +2,9 @@ const express = require('express');
 const { engine } = require('express-handlebars');
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const passport = require('passport')
+require('./config/passport');
 
 const app = express();
 
@@ -19,6 +22,19 @@ app.set('view engine', '.hbs')
 //Middlewares
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true,
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Global Variables
+app.use((req, res, next) => {
+    res.locals.user = req.user || null;
+    next();
+});
 
 //Routes
 app.use(require('./routes/index.routes'));

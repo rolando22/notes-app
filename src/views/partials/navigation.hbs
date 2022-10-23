@@ -9,11 +9,14 @@
         </div>
         <div class="nav__right">
             <ul class="nav__right-list">
+                {{#if user}}
                 <li><a class="nav__list-item" href="/notes">All Notes</a></li>
                 <li><a class="nav__list-item" href="/notes/add">Add a Note</a></li>
-                <li><a class="nav__list-item" href="/users/signin">Login</a></li>
                 <li><a class="nav__list-item" href="/users/logout">Log Out</a></li>
+                {{else}}    
                 <li><a class="nav__list-item" href="/users/signup">Register</a></li>
+                <li><a class="nav__list-item" href="/users/signin">Login</a></li>
+                {{/if}}
             </ul>
         </div>
     </div>
