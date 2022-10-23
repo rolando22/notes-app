@@ -1,4 +1,4 @@
-indexCtrl = {
+const indexCtrl = {
     renderIndex: (req, res) => {
         res.render('index');
     },

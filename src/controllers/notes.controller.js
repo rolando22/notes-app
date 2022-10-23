@@ -1,6 +1,6 @@
 const Note = require('../models/Note');
 
-notesCtrl = {
+const notesCtrl = {
     renderNoteForm: (req, res) => {
         res.render('notes/new-note');
     },
